@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
 
-import {pokemon} from './pokemonData';
-
-import PersonalPokemonContainer from './containers/PersonalPokemonContainer'
+import {pokemons} from './pokemonData';
+import UserPokemonContainer from './containers/UserPokemonContainer'
 import PokedexContainer from './containers/PokedexContainer';
 
 
@@ -11,11 +10,11 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      pokemons: pokemon
+      pokemons: pokemons
     }
   }
 
-  
+
   // handleChange = () =>{
   //
   // }
@@ -25,7 +24,7 @@ class App extends Component {
     return (
       <div id="app">
         <PokedexContainer pokemons={this.state.pokemons}/>
-        <PersonalPokemonContainer />
+        <UserPokemonContainer userPokemons={this.state.pokemons}/>
       </div>
     );
   }
