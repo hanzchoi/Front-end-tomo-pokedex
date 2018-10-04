@@ -1,11 +1,19 @@
+html {
+    box-sizing: border-box;
+}
+
+html,
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
 }
 
-body {
-  margin: 0;
-}
-
+/*
 #app {
   display: flex;
 }
@@ -27,4 +35,4 @@ body {
   height: 100vh;
   border-style: dotted;
   display: inline-block;
-}
+} */

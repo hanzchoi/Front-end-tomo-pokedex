@@ -1,9 +1,12 @@
 import React, { Component } from 'react';
+import {Segment, Grid, Image } from 'semantic-ui-react';
+
 import './App.css';
 
 import {pokemons} from './pokemonData';
 import UserPokemonContainer from './containers/UserPokemonContainer'
 import PokedexContainer from './containers/PokedexContainer';
+import Header from './components/Header';
 
 
 class App extends Component {
@@ -14,20 +17,35 @@ class App extends Component {
     }
   }
 
-
-  // handleChange = () =>{
-  //
-  // }
-  //<PokemonSearch handleChange={this.handleChange}/>
-
   render() {
     return (
-      <div id="app">
-        <PokedexContainer pokemons={this.state.pokemons}/>
-        <UserPokemonContainer userPokemons={this.state.pokemons}/>
+      <div className="app">
+        <Header/>
+
+        <Segment basic>
+          <Grid>
+            <Grid.Row >
+              <Grid.Column width={11}>
+                <PokedexContainer pokemons={this.state.pokemons}/>
+              </Grid.Column>
+              <Grid.Column width={5}>
+                <UserPokemonContainer userPokemons={this.state.pokemons}/>
+              </Grid.Column>
+            </Grid.Row>
+          </Grid>
+        </Segment>
       </div>
     );
   }
 }
 
 export default App;
+//
+//<PokedexContainer pokemons={this.state.pokemons}/>
+//<Segment>
+//</Segment>
+
+  // handleChange = () =>{
+  //
+  // }
+  //<PokemonSearch handleChange={this.handleChange}/>

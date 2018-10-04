@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PokedexList from '../components/PokedexList';
 import PokemonSearch from '../components/PokemonSearch';
+import './PokemonContainer.css'
 
 class PokedexContainer extends Component{
     state = {
@@ -8,7 +9,6 @@ class PokedexContainer extends Component{
     }
 
   handleSearchInput = (event) => {
-    console.log(event.target.value);
     this.setState({query: event.target.value})
   }
 
@@ -41,7 +41,7 @@ class PokedexContainer extends Component{
             query={this.state.query}/>
         </div>
 
-        <div>
+        <div className='pokedex-list'>
           {this.filteredPokemon().map(pokemon => <PokedexList key={pokemon.id} pokemon={pokemon} />)}
         </div>
       </div>

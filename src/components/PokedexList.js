@@ -5,10 +5,10 @@ class PokedexList extends Component{
 
   render(){
     return(
-      <span className="pokemon">
+      <div className="pokemon">
         <img src={this.props.pokemon.spriteImg}/>
         <p className="pokemon-name">{this.props.pokemon.name}</p>
-      </span>
+      </div>
 
     )
   }

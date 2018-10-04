@@ -1,0 +1,25 @@
+.pokedex-list {
+  display: flex;
+  flex-wrap: wrap;
+  height: 80vh;
+  overflow-y: scroll;
+}
+
+.pokemon {
+  width: 150px;
+  height: 150px;
+  padding: 10px;
+  margin: 10px;
+  transition: 0.4s
+}
+
+.pokemon:hover img {
+  animation: jumpy 1.5s linear infinite;
+}
+
+@keyframes jumpy {
+  0% { transform: scaleY(1) }
+  50% { transform: scaleY(0.7) translateY(20px) }
+  70% { transform: translateY(-15px) }
+  100% { transform: scaleY(1);}
+}
